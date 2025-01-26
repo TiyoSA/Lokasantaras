@@ -1,0 +1,185 @@
+/* Reset styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Layout */
+nav .layar-dalam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo Styles */
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Tombol Kembali */
+.tombol-kembali {
+    font-size: 24px;
+    transition: color 0.3s ease;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Memberikan sedikit jarak ke kanan */
+    transform: translateY(-50%); /* Vertikal sejajar dengan tengah */
+    color: #333; /* Warna teks */
+    padding: 8px 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 10;
+}
+
+/* Header dengan Latar Belakang Gambar */
+.header {
+    position: relative;
+    height: 60vh;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('asset/balurandepan.jpg') no-repeat center center/cover;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    inset: 0; /* Pengganti top, left, right, bottom */
+    background: rgba(0, 0, 0, 0.5); /* Efek gelap transparan */
+    z-index: 1;
+}
+
+.header .intro {
+    position: relative;
+    z-index: 2;
+}
+
+.header .intro h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.header .intro p {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Konten Section */
+.konten {
+    padding: 50px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.konten h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.konten p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Galeri */
+.galeri {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.galeri img {
+    width: 45%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.galeri img:hover {
+    transform: scale(1.05);
+}
+
+/* Tombol */
+.tombol {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: #f39c12;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: #e67e22;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .header .intro p {
+        font-size: 1.2rem;
+    }
+
+    .galeri {
+        flex-direction: column;
+    }
+
+    .galeri img {
+        width: 90%;
+    }
+
+    .konten ul li {
+        font-size: 1rem;
+    }
+}
